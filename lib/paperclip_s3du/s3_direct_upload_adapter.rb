@@ -1,7 +1,7 @@
 module Paperclip
 	module S3DU
 		class S3DirectUploadAdapter < Paperclip::AbstractAdapter
-		  delegate :path, :original_filename, :content_type, :size, :to => :@target
+		  delegate :path, :original_filename, :content_type, :size, :fingerprint, :to => :@target
 
 		  def initialize(target)
 		    @target = target
